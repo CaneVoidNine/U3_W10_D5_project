@@ -16,7 +16,7 @@ export default function MainSearch() {
     e.preventDefault();
     try {
       const response = await fetch(
-        baseEndpoint + query + ",uk&APPID=4f6026bc1315d42e2c0879ac5fb74945"
+        baseEndpoint + query + ",&APPID=4f6026bc1315d42e2c0879ac5fb74945"
       );
       if (response.ok) {
         const data = await response.json();
@@ -34,7 +34,7 @@ export default function MainSearch() {
     <div className="bg-light">
       <Container>
         <Row>
-          <Col md={12} className="d-flex justify-content-center py-1">
+          <Col md={12} className="d-flex justify-content-center py-1 mt-5">
             <h1>Search for weather in any city!</h1>
           </Col>
           <Col md={12} className="d-flex justify-content-center my-2">
@@ -48,8 +48,24 @@ export default function MainSearch() {
               />
             </Form>
           </Col>
-          <Col xs={10} className="mx-auto mb-5"></Col>
         </Row>
+        <Container>
+          <Row>
+            <Col md={4} className="mx-auto my-5">
+              <h3> City :</h3>
+              <h4>Country: {cities.sys.country}</h4>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
+            </Col>
+            <Col className="mx-auto my-5" md={4}>
+              {cities.name}
+            </Col>
+            <Col className="mx-auto my-5" md={4}>
+              {cities.name}
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </div>
   );
