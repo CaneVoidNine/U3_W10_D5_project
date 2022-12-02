@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyNavbar from "./components/MyNavbar";
+import MyJumbo from "./components/MyJumbo";
+import MyFooter from "./components/MyFooter";
 
+import MainSearch from "./components/MainSearch";
+import CitySearchResult from "./components/CitySearchResult";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-dark">
+      <MyNavbar />
+      <MyJumbo />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainSearch />} />
+          {/*  <Route path="/:cityId" element={<CitySearchResult */}
+        </Routes>
+      </BrowserRouter>
+      <MyFooter />
     </div>
   );
 }
