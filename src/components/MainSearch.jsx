@@ -55,7 +55,7 @@ export default function MainSearch() {
             <h3>Info: {cities.name}</h3>
             <h4>Timezone: {cities.timezone}</h4>
             <h4>Visibility: {cities.visibility} </h4>
-            <h4>Pressure: {cities.sys_country}</h4>
+            <h4>Pressure: </h4>
             <h4>Visibility: </h4>
             <h4>Wind Speed: </h4>
           </Col>
