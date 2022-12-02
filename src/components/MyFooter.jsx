@@ -5,7 +5,7 @@ export default class MyFooter extends Component {
   render() {
     return (
       <Container
-        style={{ backgroundColor: "#007BFF", position: "fixed", bottom: "0" }}
+        style={{ backgroundColor: "#007BFF" }}
         fluid
         className="smaller mt-5 pt-3"
       >

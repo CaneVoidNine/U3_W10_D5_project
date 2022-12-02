@@ -31,7 +31,7 @@ export default function MainSearch() {
   };
 
   return (
-    <div className="bg-light">
+    <div style={{ height: "200vh" }} className="bg-light">
       <Container>
         <Row>
           <Col md={12} className="d-flex justify-content-center py-1 mt-5">
@@ -49,20 +49,42 @@ export default function MainSearch() {
             </Form>
           </Col>
         </Row>
-        <Container>
+        <Container fluid>
           <Row>
-            <Col md={4} className="mx-auto my-5">
-              <h3> City :</h3>
-              <h4>Country: {cities.sys.country}</h4>
+            <Col md={2} className="mx-auto my-5">
+              <h3>Info:</h3>
+              <h4>Temperature: </h4>
+              <h4>Humidity: </h4>
+              <h4>Pressure: </h4>
+              <h4>Sunrise: </h4>
+              <h4>Sunset: </h4>
+              <h4>Timezone: </h4>
+              <h4>Visibility: </h4>
+              <h4>Wind: </h4>
+            </Col>
+            <Col className="mx-auto my-5" md={2}>
+              <h4>{cities.name}</h4>
               <h4></h4>
               <h4></h4>
               <h4></h4>
             </Col>
-            <Col className="mx-auto my-5" md={4}>
-              {cities.name}
+            <Col className="mx-auto my-5" md={2}>
+              <h4>{cities}</h4>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
             </Col>
-            <Col className="mx-auto my-5" md={4}>
-              {cities.name}
+            <Col className="mx-auto my-5" md={2}>
+              <h4>{cities}</h4>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
+            </Col>
+            <Col className="mx-auto my-5" md={2}>
+              <h4>{cities}</h4>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
             </Col>
           </Row>
         </Container>
