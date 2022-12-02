@@ -1,14 +1,12 @@
 import { Col, Row, Container, Form } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function MainSearch() {
   const [query, setQuery] = useState("");
-  const [cities, setCities] = useState({});
+  const [cities, setCities] = useState([]);
 
   const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
-  useEffect = () => {
-    handleSubmit();
-  };
+
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
@@ -20,9 +18,9 @@ export default function MainSearch() {
         baseEndpoint + query + ",&APPID=4f6026bc1315d42e2c0879ac5fb74945"
       );
       if (response.ok) {
-        const cities = await response.json();
-        console.log(cities);
-        setCities(cities);
+        const data = await response.json();
+        console.log(data);
+        setCities(data);
       } else {
         alert("Error fetching results");
       }
@@ -50,29 +48,20 @@ export default function MainSearch() {
             </Form>
           </Col>
         </Row>
-        <Container fluid>
-          <Row>
-            <Col md={2} className="mx-auto my-5">
-              <h3>Info:</h3>
-              <h4>Temperature: </h4>
-              <h4>Humidity: </h4>
-              <h4>Pressure: </h4>
-              <h4>Visibility: </h4>
-              <h4>Wind Speed: </h4>
-            </Col>
-            <Col className="mx-auto my-5" md={2}>
-              <h4>
-                {cities.name}, {cities.sys.country}
-              </h4>
-              <h4>{cities.main.temp} F</h4>
-              <h4>{cities.main.humidity} %</h4>
-              <h4>{cities.main.pressure} Pa</h4>
-              <h4>{cities.visibility}</h4>
-              <h4>{cities.wind.speed}</h4>
-            </Col>
-          </Row>
-        </Container>
       </Container>
+      <Container>
+        <Row>
+          <Col md={12} className=" my-5">
+            <h3>Info: {cities.name}</h3>
+            <h4>Timezone: {cities.timezone}</h4>
+            <h4>Visibility: {cities.visibility} </h4>
+            <h4>Pressure: {cities.sys_country}</h4>
+            <h4>Visibility: </h4>
+            <h4>Wind Speed: </h4>
+          </Col>
+        </Row>
+      </Container>
+      ;
     </div>
   );
 }
