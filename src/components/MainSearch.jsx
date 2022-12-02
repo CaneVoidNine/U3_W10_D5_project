@@ -6,21 +6,22 @@ export default function MainSearch() {
   const [query, setQuery] = useState("");
   const [cities, setCities] = useState([]);
 
-  const baseEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=London&APPID=4f6026bc1315d42e2c0879ac5fb74945`;
+  const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
 
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
-  useEffect(() => {
-    handleSubmit();
-  }, []);
-  const handleSubmit = async () => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      const response = await fetch(baseEndpoint);
+      const response = await fetch(
+        baseEndpoint + query + ",uk&APPID=4f6026bc1315d42e2c0879ac5fb74945"
+      );
       if (response.ok) {
-        const { data } = await response.json();
+        const data = await response.json();
+        console.log(data);
         setCities(data);
-        console.log(cities);
       } else {
         alert("Error fetching results");
       }
