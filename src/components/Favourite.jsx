@@ -1,14 +1,18 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Col, Row, Button, Container } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-export default function Favourites() {
+export default function Favourite() {
   const cities = useSelector((state) => state.cities.content);
   const dispatch = useDispatch();
 
   return (
-    <Container fluid>
+    <Container fluid className="bg-light">
+      <div className="d-flex justify-content-center pt-3">
+        <Link to="/">
+          <h3>Back to Home</h3>
+        </Link>
+      </div>
       <Row>
         <Col className="d-flex justify-content-center">
           <h1 className="mt-3"> Your Favourites list!</h1>
@@ -30,25 +34,12 @@ export default function Favourites() {
                     Delete from list
                   </Button>
                 </Col>
-                <Col style={{ border: "solid black" }}>
-                  <h5>{cities.data.title}</h5>
+                <Col>
                   <Row>
-                    <Col> Job Category: {cities.data.category}</Col>
                     <Col>
-                      <Link
-                        style={{ color: "red", pointer: "cursor" }}
-                        to={`/${cities.data.company_name}`}
-                      >
-                        Company name: {`job.data.company_name`}
-                      </Link>
-                    </Col>
-                    <Col>
-                      <a
-                        style={{ color: "red", pointer: "cursor" }}
-                        href={cities.data.url}
-                      >
-                        Link
-                      </a>
+                      <h2>
+                        {city.data.name},{city.data?.sys?.country}
+                      </h2>
                     </Col>
                   </Row>
                 </Col>

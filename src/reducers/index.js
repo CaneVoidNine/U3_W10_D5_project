@@ -1,5 +1,5 @@
 const initialState = {
-  jobs: {
+  cities: {
     content: [],
   },
 };
@@ -9,7 +9,7 @@ const mainReducer = (state = initialState, action) => {
     case "ADD_CITY":
       return {
         ...state,
-        jobs: {
+        cities: {
           ...state.cities,
           content: [...state.cities.content, action.payload],
         },

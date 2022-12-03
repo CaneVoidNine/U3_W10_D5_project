@@ -3,3 +3,9 @@
   background-size: cover;
   color: white;
 }
+
+.toHide {
+  display: none;
+  pointer-events: none;
+  z-index: -1;
+}

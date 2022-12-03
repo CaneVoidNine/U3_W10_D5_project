@@ -1,6 +1,7 @@
 import "./styles.css";
 import React from "react";
-import { Jumbotron, Button, Container } from "react-bootstrap";
+import { Jumbotron, Container } from "react-bootstrap";
+
 export default function MyJumbo() {
   return (
     <div id="jumbo">

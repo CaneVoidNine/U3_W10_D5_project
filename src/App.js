@@ -7,7 +7,7 @@ import MyFooter from "./components/MyFooter";
 
 import MainSearch from "./components/MainSearch";
 
-import Favourites from "./components/Favourite";
+import Favourite from "./components/Favourite";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainSearch />} />
-          <Route path="/favs" element={<Favourites />} />
+          <Route path="/favourites" element={<Favourite />} />
         </Routes>
       </BrowserRouter>
       <MyFooter />

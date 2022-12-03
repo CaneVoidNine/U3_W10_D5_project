@@ -10,7 +10,7 @@ export default function MyNavbar() {
             width="16"
             height="16"
             fill="currentColor"
-            class="bi bi-brightness-high-fill"
+            className="bi bi-brightness-high-fill"
             viewBox="0 0 16 16"
           >
             <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
@@ -30,7 +30,7 @@ export default function MyNavbar() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-house-fill"
+              className="bi bi-house-fill"
               viewBox="0 0 16 16"
             >
               <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
@@ -54,7 +54,7 @@ export default function MyNavbar() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-heart-fill"
+              className="bi bi-heart-fill"
               viewBox="0 0 16 16"
             >
               <path
@@ -76,7 +76,7 @@ export default function MyNavbar() {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-bookmark-plus-fill"
+              className="bi bi-bookmark-plus-fill"
               viewBox="0 0 16 16"
             >
               <path
@@ -107,7 +107,7 @@ export default function MyNavbar() {
               width="12"
               height="12"
               fill="currentColor"
-              class="bi bi-caret-down-fill"
+              className="bi bi-caret-down-fill"
               viewBox="0 0 16 16"
             >
               <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
