@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Col, Row, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function Favs() {
-  const jobs = useSelector((state) => state.jobs.content);
+export default function Favourites() {
+  const cities = useSelector((state) => state.cities.content);
   const dispatch = useDispatch();
 
   return (
@@ -15,7 +15,7 @@ export default function Favs() {
         </Col>
         <Col sm={12}>
           <ul style={{ listStyle: "none" }}>
-            {jobs.map((job, i) => (
+            {cities.map((city, i) => (
               <Row key={i} className="my-4 align-items-center">
                 <Col xs={1}>
                   <Button
@@ -31,13 +31,13 @@ export default function Favs() {
                   </Button>
                 </Col>
                 <Col style={{ border: "solid black" }}>
-                  <h5>{job.data.title}</h5>
+                  <h5>{cities.data.title}</h5>
                   <Row>
-                    <Col> Job Category: {job.data.category}</Col>
+                    <Col> Job Category: {cities.data.category}</Col>
                     <Col>
                       <Link
                         style={{ color: "red", pointer: "cursor" }}
-                        to={`/${job.data.company_name}`}
+                        to={`/${cities.data.company_name}`}
                       >
                         Company name: {`job.data.company_name`}
                       </Link>
@@ -45,7 +45,7 @@ export default function Favs() {
                     <Col>
                       <a
                         style={{ color: "red", pointer: "cursor" }}
-                        href={job.data.url}
+                        href={cities.data.url}
                       >
                         Link
                       </a>

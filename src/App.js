@@ -6,7 +6,8 @@ import MyJumbo from "./components/MyJumbo";
 import MyFooter from "./components/MyFooter";
 
 import MainSearch from "./components/MainSearch";
-import Favs from "./components/Favourite";
+
+import Favourites from "./components/Favourite";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainSearch />} />
-          <Route path="/Favourites" element={<Favs />} />
+          <Route path="/favs" element={<Favourites />} />
         </Routes>
       </BrowserRouter>
       <MyFooter />
