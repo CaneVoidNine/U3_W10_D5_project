@@ -6,7 +6,7 @@ import MyJumbo from "./components/MyJumbo";
 import MyFooter from "./components/MyFooter";
 
 import MainSearch from "./components/MainSearch";
-import CitySearchResult from "./components/CitySearchResult";
+
 function App() {
   return (
     <div className="bg-dark">
@@ -15,7 +15,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainSearch />} />
-          {/*  <Route path="/:cityId" element={<CitySearchResult */}
         </Routes>
       </BrowserRouter>
       <MyFooter />

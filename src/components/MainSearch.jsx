@@ -1,6 +1,6 @@
 import { Col, Row, Container, Form } from "react-bootstrap";
 import { useState } from "react";
-
+import City from "./City";
 export default function MainSearch() {
   const [query, setQuery] = useState("");
   const [cities, setCities] = useState([]);
@@ -49,25 +49,7 @@ export default function MainSearch() {
           </Col>
         </Row>
       </Container>
-      <Container>
-        <Row className="d-flex justify-content-center">
-          <Col md={2} className=" my-5">
-            <h4>Info: </h4>
-            <h4>Temperature: </h4>
-            <h4>Humidity: </h4>
-            <h4>Pressure: </h4>
-            <h4>Wind: </h4>
-          </Col>
-          <Col md={2} className=" my-5">
-            <h4>{cities.name} </h4>
-            <h4>{cities?.main?.temp} </h4>
-            <h4>{cities?.main?.humidity} </h4>
-            <h4>{cities?.main?.pressure} </h4>
-            <h4>{cities?.wind?.speed}</h4>
-          </Col>
-        </Row>
-      </Container>
-      ;
+      <City data={cities} />;
     </div>
   );
 }
