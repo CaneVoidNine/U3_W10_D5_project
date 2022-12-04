@@ -39,9 +39,16 @@ const Details = () => {
     <div>
       <MyNavbar />
       <MyJumbo />
-      <div className="bg-light d-flex justify-content-center m-5">
+      <div
+        style={{ color: "white" }}
+        className="bg-primary d-flex justify-content-center m-5"
+      >
         <h1>
-          {city?.name}, {city?.sys?.country}
+          <img
+            src={`http://openweathermap.org/img/wn/${city?.weather?.[0]?.icon}.png`}
+            alt="..."
+          />
+          <span> </span> {city?.name}, {city?.sys?.country}
         </h1>
       </div>
       <Container fluid>
