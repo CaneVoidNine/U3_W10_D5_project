@@ -9,3 +9,6 @@
   pointer-events: none;
   z-index: -1;
 }
+.toShow {
+  display: contents;
+}

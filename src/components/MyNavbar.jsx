@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export default function MyNavbar() {
   return (
     <div>
@@ -24,7 +25,12 @@ export default function MyNavbar() {
               height: "3rem",
             }}
           ></div>
-          <Nav.Link className="px-5" style={{ color: "white" }} href="#home">
+          <Link
+            to="/"
+            className="px-5 pt-2"
+            style={{ color: "white" }}
+            href="#home"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -37,17 +43,17 @@ export default function MyNavbar() {
               <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
             </svg>{" "}
             Home
-          </Nav.Link>
+          </Link>
           <div
             style={{
               borderLeft: "1px solid white",
               height: "3rem",
             }}
           ></div>
-          <Nav.Link
-            className="px-4"
+          <Link
+            to="/favourites"
+            className="px-4 pt-2"
             style={{ color: "white" }}
-            href="#features"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +69,7 @@ export default function MyNavbar() {
               />
             </svg>{" "}
             Favourites
-          </Nav.Link>
+          </Link>
           <div
             style={{
               borderLeft: "1px solid white",

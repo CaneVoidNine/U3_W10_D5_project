@@ -2,7 +2,7 @@ import { Row, Col, Button } from "react-bootstrap";
 
 import { useDispatch } from "react-redux";
 
-const City = ({ data, props }) => {
+const City = ({ data }) => {
   const dispatch = useDispatch();
 
   return (
@@ -26,6 +26,10 @@ const City = ({ data, props }) => {
       </Col>
       <Col md={2}>
         <h4>
+          <img
+            src={`http://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}.png`}
+            alt="..."
+          />
           {data.name}
           <span> </span>
           {data?.sys?.country}
