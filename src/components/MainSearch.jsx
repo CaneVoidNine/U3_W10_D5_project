@@ -1,13 +1,14 @@
 import { Col, Row, Container, Form } from "react-bootstrap";
 import { useState } from "react";
 import City from "./City";
-import { Link } from "react-router-dom";
+
 import MyNavbar from "./MyNavbar";
 import MyJumbo from "./MyJumbo";
 import MyFooter from "./MyFooter";
+import { useEffect } from "react";
 export default function MainSearch() {
   const [query, setQuery] = useState("");
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState({});
   const [hide, setHide] = useState(false);
 
   const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -24,9 +25,9 @@ export default function MainSearch() {
         baseEndpoint + query + ",&APPID=4f6026bc1315d42e2c0879ac5fb74945"
       );
       if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        setCities(data);
+        const city = await response.json();
+        console.log(city);
+        setCities(city);
       } else {
         alert("Error fetching results");
       }

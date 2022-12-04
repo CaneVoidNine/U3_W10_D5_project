@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainSearch from "./components/MainSearch";
 
 import Favourite from "./components/Favourite";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainSearch />} />
           <Route path="/favourites" element={<Favourite />} />
+          <Route path="/details/:cityName" element={<Details />} />
         </Routes>
       </BrowserRouter>
     </div>

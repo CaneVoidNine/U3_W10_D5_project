@@ -1,6 +1,7 @@
 import { Row, Col, Button } from "react-bootstrap";
 
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const City = ({ data }) => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const City = ({ data }) => {
             src={`http://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}.png`}
             alt="..."
           />
-          {data.name}
+          <Link to={"/details/" + data.name}> {data.name} </Link>
           <span> </span>
           {data?.sys?.country}
         </h4>
