@@ -11,4 +11,5 @@
 }
 .toShow {
   display: contents;
+  pointer-events: all;
 }

@@ -48,7 +48,7 @@ export default function MainSearch() {
               <h1>Search for weather in any city!</h1>
             </Col>
 
-            <Col md={12} className="d-flex justify-content-center my-2">
+            <Col md={12} className="d-flex justify-content-center mt-2 mb-5">
               <Form onSubmit={handleSubmit}>
                 <Form.Control
                   type="search"
