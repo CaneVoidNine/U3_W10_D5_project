@@ -81,7 +81,9 @@ export default function MainSearch() {
             </h3>
           </Col>
         </Row>
-        <City data={cities} />
+        <div className={`toHide ${hide ? "toShow" : ""}`}>
+          <City c data={cities} />
+        </div>
       </div>
       <MyFooter />
     </div>
