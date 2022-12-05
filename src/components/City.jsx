@@ -27,10 +27,6 @@ const City = ({ data }) => {
       </Col>
       <Col md={2}>
         <h4>
-          <img
-            src={`http://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}.png`}
-            alt="..."
-          />
           <Link to={"/details/" + data.name}> {data.name} </Link>
           <span> </span>
           {data?.sys?.country}
